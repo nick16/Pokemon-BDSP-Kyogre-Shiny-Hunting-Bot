@@ -1,0 +1,1 @@
+# Pokemon-BDSP-Kyogre-Shiny-Hunting-Bot
