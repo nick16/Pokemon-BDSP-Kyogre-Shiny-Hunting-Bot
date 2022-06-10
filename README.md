@@ -52,4 +52,4 @@ This bot works by checking a single pixel on screen at a precise (x,y) to check 
 - I created a stuck() function that gets executed right before we check the color of the pokemon, in the cases where the controller somehow misses a button press and ends up in the Switch settings. Because there were frequent cases where this would happen.
 - There's also been frequent cases where the OBS within the virtual machine would freeze the game capture. To try to circumvent this occuring I included in the script to close and reopen OBS everytime before checking Kyogre's color (since thats the only time where we must show the game on screen)
 - There were times where when I started OBS through the script, OBS would open in a different spot. To make OBS open in the same corner, I installed gnome-tweaks through apt then executed `gsettings set org.gnome.mutter center-new-windows true`
-- I double pressed every button in the script to make sure a button press misses, and potentially causing an unintended loop.
+- I double pressed every button in the script to make sure a button press doesn't miss, avoiding a potential loop.
