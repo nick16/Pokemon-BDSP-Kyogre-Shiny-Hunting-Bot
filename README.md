@@ -1,4 +1,4 @@
-![](https://github.com/nick16/Pokemon-BDSP-Kyogre-Shiny-Hunting-Bot/blob/main/kyogre.gif)
+![](https://github.com/nick16/Pokemon-BDSP-Kyogre-Shiny-Hunting-Bot/blob/main/images/kyogre.gif)
 
 # Pokemon BD/SP Ramanas Park Kyogre Shiny Hunting Bot
 This script is an edited version of run_controller_cli.py script from https://github.com/mart1nro/joycontrol. In order for this script to run you must download the joycontrol repository by mart1nro, and replace mart1nro's run_controller_cli.py with this one, and add this shiny_hunter.py into the same folder.
@@ -6,7 +6,7 @@ This script is an edited version of run_controller_cli.py script from https://gi
 This script was created for shiny hunting the pokemon Kyogre from Ramanas Park in BD/SP.
 This script is easily customizable, so feel free to customize to shiny hunt any pokemon!
 
-![](https://github.com/nick16/Pokemon-BDSP-Kyogre-Shiny-Hunting-Bot/blob/main/shiny_kyogre_encounter.PNG)
+![](https://github.com/nick16/Pokemon-BDSP-Kyogre-Shiny-Hunting-Bot/blob/main/images/shiny_kyogre_encounter.PNG)
 
 # Setup
 ## Prerequisites
