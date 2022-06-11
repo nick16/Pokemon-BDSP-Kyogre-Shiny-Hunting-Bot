@@ -54,3 +54,4 @@ This bot works by checking a single pixel on screen at a precise (x,y) to check 
 - There were times where when I started OBS through the script, OBS would open in a different spot. To make OBS open in the same corner, I installed gnome-tweaks through apt then executed `gsettings set org.gnome.mutter center-new-windows true`
 - I double pressed every button in the script to make sure a button press doesn't miss, avoiding a potential loop.
 - In case the loading times change in future updates, my BD was running version 1.1.1
+- Use a non shiny pokemon in your encounter w Kyogre. If you must use a shiny in your encounter, then add 3.1 seconds to the sleep timer on line 98 in run_controller_cli.py to compensate for your pokemons shiny animation.
