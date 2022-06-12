@@ -55,3 +55,4 @@ This bot works by checking a single pixel on screen at a precise (x,y) to check 
 - I double pressed every button in the script to make sure a button press doesn't miss, avoiding a potential loop.
 - In case the loading times change in future updates, my BD was running version 1.1.1
 - Use a non shiny pokemon in your encounter w Kyogre. If you must use a shiny in your encounter, then add 3.1 seconds to the sleep timer on line 98 in run_controller_cli.py to compensate for your pokemons shiny animation.
+- If the pokemon you're shiny hunting moves too much to check a consistent part of the pokemon, another method rather than checking the color of a single pixel is checking the average color of a group of pixels.
