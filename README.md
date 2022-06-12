@@ -12,7 +12,7 @@ This script is easily customizable, so feel free to customize to shiny hunt any 
 ## Prerequisites
 - Ubuntu OS (A virtual machine is prefered)
 - A video capture device to capture the input from the docked Nintendo Switch to your PC (I used Elgato's Game Capture Hd60 Pro)
-- A USB Bluetooth Adapter for your pc (Internal BT adapters may work if Ubuntu is your native OS, otherwise it must be a USB Bluetooth adapter for the virtual machine to use bluetooth)
+- A USB Bluetooth Adapter for your pc (Internal BT adapters may work if Ubuntu is your native OS, otherwise it must be a USB Bluetooth adapter for the virtual machine to use bluetooth) (I used Asus USB-BT500)
 
 
 ## Setting up the Bot
