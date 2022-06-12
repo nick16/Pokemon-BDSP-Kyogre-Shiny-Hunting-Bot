@@ -23,7 +23,7 @@ This bot works by checking a single pixel on screen at a precise (x,y) to check 
    If you use a virtual machine make sure USB 3.0 is selected in the USB options, so that the video input in OBS does not stutter.
 
 ### 2) Getting the emulated controller to connect to your switch
-   Download and extract mart1nro's repository into a folder in your Ubuntu OS.
+   Download and extract [mart1nro's repository](https://github.com/mart1nro/joycontrol) into a folder in your Ubuntu OS.
 
    Follow mart1nro's README to get the emulated controller to connect to your switch inside of your Ubuntu OS (Since his script aparently only works on certain Linux distros).
     
