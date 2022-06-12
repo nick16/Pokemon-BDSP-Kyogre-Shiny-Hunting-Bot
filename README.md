@@ -9,7 +9,7 @@ This script is easily customizable, so feel free to customize to shiny hunt any 
 ![](https://github.com/nick16/Pokemon-BDSP-Kyogre-Shiny-Hunting-Bot/blob/main/images/shiny_kyogre_encounter.PNG)
 
 # Setup
-## Prerequisites
+## What You Need
 - **Ubuntu OS** (A virtual machine is prefered)
 - A **video capture device** to capture the input from the docked Nintendo Switch to your PC (I used Elgato's Game Capture Hd60 Pro)
 - A **USB Bluetooth Adapter** for your pc (Internal BT adapters may work if Ubuntu is your native OS, otherwise it must be a USB Bluetooth adapter for the virtual machine to use bluetooth) (I used Asus USB-BT500)
@@ -50,9 +50,9 @@ This bot works by checking a single pixel on screen at a precise (x,y) to check 
 # Tips:
 - How I figured out the best x,y coordinates to check if Kyogre is shiny is finding where Kyogre is still for the longest, and grabbed the x,y coordinated on that spot by using the command `xdotool getmouselocation --shell` with my cursor on the spot I wanted to grab.
 - I created a stuck() function that gets executed right before we check the color of the pokemon, in the cases where the controller somehow misses a button press and ends up in the Switch settings. Because there were frequent cases where this would happen.
-- There's also been frequent cases where the OBS within the virtual machine would freeze the game capture. To try to circumvent this occuring I included in the script to close and reopen OBS everytime before checking Kyogre's color (since thats the only time where we must show the game on screen)
-- There were times where when I started OBS through the script, OBS would open in a different spot. To make OBS open in the same corner, I installed gnome-tweaks through apt then executed `gsettings set org.gnome.mutter center-new-windows true`. But this didnt work 100% of the time. So your best bet is once OBS opens in any one spot, use the getmouselocation script in the first tip, to choose the pixel on the pokemon you want to check if shiny.
+- There's also been frequent cases where the OBS within the virtual machine would freeze the game capture. To try to circumvent this from occuring, I included in the script to close and reopen OBS everytime before checking Kyogre's color (since thats the only time where we must show the game on screen)
+- There were times where when OBS would open through the script, OBS would open in a different spot. To make OBS open in the same corner, I installed gnome-tweaks through apt then executed `gsettings set org.gnome.mutter center-new-windows true`. But this didnt work 100% of the time. So your best bet is once OBS opens in any one spot consistently, use the getmouselocation script in the first tip, to choose the pixel on the pokemon you want to check if shiny.
 - I double pressed every button in the script to make sure a button press doesn't miss, avoiding a potential loop.
-- In case the loading times change in future updates, my BD was running version 1.1.1
-- Use a non shiny pokemon in your encounter w Kyogre. If you must use a shiny in your encounter, then add 3.1 seconds to the sleep timer on line 98 in run_controller_cli.py to compensate for your pokemons shiny animation.
+- In case the game loading times change in future updates, my BD was running version 1.1.1
+- Use a non shiny pokemon in your encounter with Kyogre. If you must use a shiny in your encounter, then add 3.1 seconds to the sleep timer on line 98 in run_controller_cli.py to compensate for your pokemons shiny animation.
 - If the pokemon you're shiny hunting moves too much to check a consistent part of the pokemon, another method rather than checking the color of a single pixel is checking the average color of a group of pixels.
