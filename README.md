@@ -47,7 +47,6 @@ This bot works by checking a single pixel on screen at a precise (x,y) to check 
 
 
 # Tips:
-- How I figured out the best x,y coordinates to check if Kyogre is shiny is finding where Kyogre is still for the longest, and grabbed the x,y coordinated on that spot by using the command `xdotool getmouselocation --shell` with my cursor on the spot I wanted to grab.
 - I created a stuck() function that gets executed right before we check the color of the pokemon, in the cases where the controller somehow misses a button press and ends up in the Switch settings. Because there were frequent cases where this would happen.
 - There's also been frequent cases where the OBS within the virtual machine would freeze the game capture. To try to circumvent this from occuring, I included in the script to close and reopen OBS everytime before checking Kyogre's color (since thats the only time where we must show the game on screen)
 - There were times where when OBS would open through the script, OBS would open in a different spot. To make OBS open in the same corner, I installed gnome-tweaks through apt then executed `gsettings set org.gnome.mutter center-new-windows true`. But this didnt work 100% of the time. So your best bet is once OBS opens in any one spot consistently, use the getmouselocation script in the first tip, to choose the pixel on the pokemon you want to check if shiny.
@@ -55,3 +54,12 @@ This bot works by checking a single pixel on screen at a precise (x,y) to check 
 - In case the game loading times change in future updates, my BD was running version 1.1.1
 - Use a non shiny pokemon in your encounter with Kyogre. If you must use a shiny in your encounter, then add 3.1 seconds to the sleep timer on line 98 in run_controller_cli.py to compensate for your pokemons shiny animation.
 - If the pokemon you're shiny hunting moves too much to check a consistent part of the pokemon, another method rather than checking the color of a single pixel is checking the average color of a group of pixels.
+
+## How to Customize for Another Pokemon
+   If you would like to use this script to shiny hunt another pokemon that requires a soft game reset, then you should have to only change 2 things.
+1. In the shiny function within shiny_hunter.py, you would change the range of colors that determines if the pokemon is shiny, to a spectrum of colors of the shiny pokemon you're shiny hunting.
+   What I did for Kyogre was that I googled images and videos of shiny Kyogre then used the Eyedropper Tool in Photoshop to get the RGB values from those images/videos. With those different RGB values, I found the minimum and maximum value for each R,G,B and made a range from those values.
+3. On line 100 in the run_controller_cli.py, you would have to change the (x,y) on-screen coordinates to be the pixel over your pokemon you'll be checking the color of.
+   How I figured out the best x,y coordinates to check if Kyogre is shiny is finding where Kyogre is still for the longest, and grabbed the x,y coordinated on that spot by using the command `xdotool getmouselocation --shell` with my cursor on the spot I wanted to grab.
+   
+  If you would like to use this script to shiny hunt a pokemon that involves running around or a longer dialogue, then you would have to add button presses and sleep functions to the shiny_hunt() function on line 32 in run_controller_cli.py
