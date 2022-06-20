@@ -34,6 +34,7 @@ This bot works by checking a single pixel on screen at a precise (x,y) to check 
         1. Install VirtualBox's Guest Additions to enable USB access in the VM.
         2. Unplug the USB BT adapter from your PC.
         3. Within the virtual machine, plug in your USB BT adapter into your pc, and connect to the BT adapter (Devices > USB).
+   - When you run mart1nro's script, it helps if you dont have any controller connected to the switch (doc your switch and don't have any connected controllers)
     
    Once you've gotten the controller to connect to your switch and you've played around controlling your swtch through the terminal to ensure you've done things right, drag the two files from this repo [run_controller_cli.py, shiny_hunter.py] into that same folder (replacing his run_controller_cli.py)
 
