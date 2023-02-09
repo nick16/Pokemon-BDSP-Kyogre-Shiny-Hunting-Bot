@@ -1,6 +1,6 @@
 ![](https://github.com/nick16/Pokemon-BDSP-Kyogre-Shiny-Hunting-Bot/blob/main/images/kyogre.gif)
 
-# Pokemon BD/SP Ramanas Park Kyogre Shiny Hunting Bot
+# Pokemon BDSP Ramanas Park Kyogre Shiny Hunting Bot
 This script is an edited version of run_controller_cli.py script from https://github.com/mart1nro/joycontrol. In order for this script to run you must download the joycontrol repository by mart1nro, and replace mart1nro's run_controller_cli.py with this one, and add this shiny_hunter.py into the same folder.
 
 This script was created for shiny hunting the pokemon Kyogre from Ramanas Park in BD/SP on the Nintendo Switch.
@@ -28,7 +28,7 @@ This bot works by checking a single pixel on screen at a precise (x,y) to check 
    Follow mart1nro's README to get the emulated controller to connect to your switch inside of your Ubuntu OS (Since his script apparently only works on certain Linux distros).
     
    Some hurdles I came across when trying to get the emulated controller connect to my switch:
-   - mart1nro's script uses a function deprecated in the latest version of the module hid, so when installing hid I forced version 1.0.0 `pip3 install hid==1.0.0`
+   - mart1nro's script uses a function deprecated in the latest version of the module hid, so when installing hid I forced version 1.0.0 `sudo pip3 install hid==1.0.0`
    - When I executed the script, it said I was missing modules I had installed, so my workaround was to install modules and run the script inside a virtual environment.
    - mart1nro's script relies on Bluetooth to connect the emulated controller to your Switch, so if you are using VirtualBox connect to your USB BT adapter by:
         1. Install VirtualBox's Guest Additions to enable USB access in the VM.
