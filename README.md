@@ -19,7 +19,7 @@ This script is easily customizable, so feel free to customize to shiny hunt any 
 This bot works by checking a single pixel on screen at a precise (x,y) to check whether Kyogre is shiny or not. This precise (x,y) is based off of OBS being in the most top left of the screen, and Kyogre being at a precise coordinate at the right time (by calculated sleep functions).
 
 ###  1) Install Ubuntu
-   I used a virtual machine of Ubuntu 20.04.4 LTS inside of VirtualBox.
+   I used a virtual machine of Ubuntu 20.04.4 LTS inside of VirtualBox. Thw Windowing System of the OS must be X11 for the screen capturing functions to work.
    If you use a virtual machine make sure USB 3.0 is selected in the USB options, so that the video input in OBS does not stutter.
 
 ### 2) Getting the emulated controller to connect to your switch
